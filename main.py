@@ -46,7 +46,7 @@ class ClockApp:
         # 見た目の設定 (時刻表示用)
         style = ttk.Style()
         # カウントダウンのちらつきを防ぐため、等幅フォントを設定
-        self.countdown_font = ("Courier New", 72, "bold")
+        self.countdown_font = ("Arial", 72, "bold")
         style.configure(
             "TLabel", 
             font=self.countdown_font, 
@@ -56,9 +56,8 @@ class ClockApp:
 
         # 時刻表示用のラベル
         self.time_label = ttk.Label(self.canvas, text="", style="TLabel", anchor="center")
-        # ラベルは一旦packせず、create_windowで中央に配置します
 
-        # 2. フッターラベル
+        # フッターラベル
         self.footer_label = tk.Label(
             root,
             text="皆様の新たなご知見に触れられますことを心待ちにしております。",
